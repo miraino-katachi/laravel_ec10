@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+#app {
+    background-color: #f8d7da;
+    padding: 0;
+}
+
+header {
+    background-image: url(/images/strawberry-cake.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 2px 2px 2px #555;
+}
+
+footer {
+    background-color: #fff;
+}
