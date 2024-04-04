@@ -27,7 +27,6 @@ Route::get('/', [\App\Http\Controllers\ItemController::class, 'index'])->name('i
 Route::get('/detail/{item}', [\App\Http\Controllers\ItemController::class, 'detail'])->name('item.detail');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::post('/cart/del', [\App\Http\Controllers\CartController::class, 'del'])->name('cart.del');
     // 会員情報ページ
     Route::get('/user', [\App\Http\Controllers\UserInfoController::class, 'index'])->name('user.index');
     // 会員情報登録ページ
