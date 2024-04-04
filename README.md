@@ -23,3 +23,53 @@ Windows環境でも問題なく動きます。
 
 - まずは「Laravel 10で簡単なECサイトを作る(仕様書).pdf」を見て、どのようなものを作るのかを把握してください。
 - 「Laravel10で簡単なECサイトを作る.pdf」を見ながら、コーディングを進めてください。
+
+## githubに上がっている課題のサンプルを動かしてみよう
+
+- 下記の手順でサンプルコードを動かすことができます。
+
+githubからソースコードを入手
+```
+git clone https://github.com/miraino-katachi/laravel_ec10
+```
+
+プロジェクトのディレクトリに移動
+```
+cd src/shop
+```
+
+Laravel本体をダウンロード
+```
+composer install
+```
+
+Sqliteのファイルを作成
+```
+touch database/database.sqlite または、空のファイルを作成
+```
+
+.env.exampleをコピーして.envを作成し編集、アプリケーションキーを発行
+```
+php artisan key:generate
+```
+
+表示に必要なパッケージをインストール
+```
+npm install && npm run build
+```
+
+マイグレーションを実行
+```
+php artisan migrate
+```
+
+シーダーを実行
+```
+php artisan db:seed
+```
+
+サーバーを起動して動作確認
+```
+php artisan serve
+```
+
