@@ -21,7 +21,8 @@
                     <div class="col-md-2 text-end">数量：{{ $cart->num }} </div>
                     <div class="col-md-2 text-end">小計：{{ number_format($cart->item->price * $cart->num) }}円</div>
                     <div class="col-md-2">
-                        <a href="{{ route('item.detail', $cart->item) }}" class="btn btn-primary">数量変更</a>                                <a class="btn btn-danger"onclick="event.preventDefault();
+                        <a href="{{ route('item.detail', $cart->item) }}" class="btn btn-primary">数量変更</a>
+                        <a class="btn btn-danger"onclick="event.preventDefault();
                             document.getElementById('del-form{{ $loop->index }}').submit();">削除</a>
                         <form id="del-form{{ $loop->index }}" action="{{ route('cart.del') }}" method="post">
                             @csrf
