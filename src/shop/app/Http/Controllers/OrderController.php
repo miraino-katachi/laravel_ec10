@@ -56,9 +56,9 @@ class OrderController extends Controller
             $detail->item_id = $cart->item->id;
             $detail->num = $cart->num;
             $detail->save();
-            // カートを削除する
-            $cart->delete();
         }
+        // カートを削除する
+        Cart::where('user_id', $user_id)->delete();
 
         return redirect(route('order.thanks'));
     }
